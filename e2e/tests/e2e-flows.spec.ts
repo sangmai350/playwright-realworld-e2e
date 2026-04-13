@@ -1,6 +1,5 @@
-import { test } from "../../../fixtures";
+import { test } from "../../fixtures";
 import { expect } from "@playwright/test";
-import { USER } from "../../constants/credential";
 
 const log = (msg: string, data?: any) => {
   if (data) console.log(`[E2E] ${msg}`, data);
@@ -16,9 +15,14 @@ test.describe("E2E flows", () => {
       log("Navigated to login page");
     });
 
+    const email = process.env.E2E_USERNAME;
+    const password = process.env.E2E_PASSWORD;
+
+    test.skip(!email || !password, "E2E_USERNAME and E2E_PASSWORD must be defined in the environment.");
+
     await test.step("Login with valid user", async () => {
-      log("Logging in", USER.email);
-      await loginPage.login(process.env.E2E_USERNAME!, process.env.E2E_PASSWORD!);
+      log("Logging in", email);
+      await loginPage.login(email!, password!);
     });
 
     await test.step("Verify user is logged in", async () => {
