@@ -1,0 +1,76 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "rootDirs": [
+      "./front/src",
+      "./shared-ts/core"
+    ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "../",
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    "paths": {
+      "@essential/shared-ts/*": [
+        "shared-ts/*"
+      ],
+      "api/*": [
+        "front/src/api/*"
+      ],
+      "components/*": [
+        "front/src/components/*"
+      ],
+      "components": [
+        "front/src/components/index"
+      ],
+      "componentLibrary/*": [
+        "front/src/componentLibrary/*"
+      ],
+      "app/*": [
+        "front/src/app/*"
+      ],
+      "pages/*": [
+        "front/src/pages/*"
+      ],
+      "pages": [
+        "front/src/pages/index"
+      ],
+      "assets/*": [
+        "front/src/assets/*"
+      ],
+      "generated/*": [
+        "front/src/generated/*"
+      ],
+      "generated": [
+        "front/src/generated/index"
+      ],
+      "store/*": [
+        "front/src/store/*"
+      ],
+      "utils/*": [
+        "front/src/utils/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ]
+}

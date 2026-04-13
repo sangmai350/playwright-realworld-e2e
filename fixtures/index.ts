@@ -1,0 +1,1 @@
+export { pageFixtures as test } from "./page-fixture";
