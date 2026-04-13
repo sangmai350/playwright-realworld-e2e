@@ -71,6 +71,8 @@
     }
   },
   "include": [
-    "src"
+    "fixtures",
+    "e2e",
+    "playwright.config.ts"
   ]
 }

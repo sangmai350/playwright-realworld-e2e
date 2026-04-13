@@ -1,17 +1,22 @@
 # Playwright E2E – RealWorld Demo
 
-## 📌 Overview
+## Overview
 
 Small E2E test suite using **Playwright + TypeScript** for https://demo.realworld.show
 
-## ✅ Covered Flows
+## Prerequisites
+
+* Node.js >= 18.x
+* npm >= 9.x
+
+## Covered Flows
 
 * Login (success & fail)
 * Create article
 * Like article
 * Comment on article
 
-## 🏗️ Structure
+## Structure
 
 ```
 e2e/
@@ -23,20 +28,20 @@ fixtures/
 playwright.config.ts
 ```
 
-## ⚙️ Setup
+## Setup
 
 ```
 npm install
 npx playwright install
 ```
 
-## ▶️ Run
+## Run
 
 ```
 npm test
 ```
 
-## 🔐 Test Account
+## Test Account
 
 Update credentials in:
 
@@ -44,7 +49,7 @@ Update credentials in:
 e2e/constants/credential.ts
 ```
 
-## 🧪 Notes
+## Notes
 
 * Uses Page Object Model + custom fixtures
 * Tests are independent and runnable in parallel

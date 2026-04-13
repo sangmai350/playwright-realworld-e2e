@@ -18,7 +18,7 @@ test.describe("E2E flows", () => {
 
     await test.step("Login with valid user", async () => {
       log("Logging in", USER.email);
-      await loginPage.login(USER.email, USER.password);
+      await loginPage.login(process.env.E2E_USERNAME!, process.env.E2E_PASSWORD!);
     });
 
     await test.step("Verify user is logged in", async () => {
@@ -27,7 +27,11 @@ test.describe("E2E flows", () => {
     });
   });
 
-  test("User can create article", async ({ page, editorPage, loggedInHomePage }) => {
+  test("User can create article", async ({
+    page,
+    editorPage,
+    loggedInHomePage,
+  }) => {
     log("Start create article test");
 
     const title = `E2E ${Date.now()}`;
@@ -44,7 +48,7 @@ test.describe("E2E flows", () => {
         title,
         "Test description",
         "Test body",
-        "test"
+        "test",
       );
     });
 
